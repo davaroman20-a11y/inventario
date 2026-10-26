@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from databse import leer_base_datos, obtener_producto, guardar_base_datos
 from schemas import ProductoCreate, OrdenCreate, OrdenUpdate
 
+
 # Inicializar la aplicación
 apiRest = FastAPI(
     title="API inventarios SENA",
