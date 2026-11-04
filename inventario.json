@@ -1,0 +1,32 @@
+
+[
+    {
+        "codigo": "P001",
+        "nombre": "Arroz",
+        "stock": 2,
+        "categoria": "Alimentos"
+    },
+    {
+        "codigo": "P002",
+        "nombre": "Arroz integral",
+        "stock": 10,
+        "categoria": "Alimentos"
+    },
+    {
+        "codigo": "P003",
+        "nombre": "Jabon",
+        "stock": 3,
+        "categoria": "Aseo"
+    },
+    {
+        "codigo": "P004",
+        "nombre": "Buj\u00eda",
+        "categoria": "Ingnicion",
+        "precio": 50000.0,
+        "stock": 15,
+        "compatible_con": [
+            "motos",
+            "carros"
+        ]
+    }
+]

@@ -1,0 +1,23 @@
+[
+    {
+        "placa": "BJA123",
+        "modelo": "Bajaj Dominar 400",
+        "falla_reportada": "Problema de frenos",
+        "estado": "Reparada",
+        "costo_reparacion": 150000.0
+    },
+    {
+        "placa": "BJA456",
+        "modelo": "Bajaj Pulsar NS200",
+        "falla_reportada": "Cambio de aceite",
+        "estado": "Reparada",
+        "costo_reparacion": 250000.0
+    },
+    {
+        "placa": "HON789",
+        "modelo": "Honda CB190R",
+        "falla_reportada": "Revisión general",
+        "estado": "En diagnóstico",
+        "costo_reparacion": 0
+    }
+]
