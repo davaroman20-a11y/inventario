@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
-from databse import leer_base_datos, obtener_producto, guardar_base_datos
-from schemas import ProductoCreate
+from ..databse import leer_base_datos, obtener_producto, guardar_base_datos
+from ..schemas import ProductoCreate
 
 router = APIRouter(tags=["Inventario"])
 

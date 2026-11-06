@@ -1,8 +1,9 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Depends
 from fastapi import APIRouter, HTTPException
 import json
 import os
-from schemas import OrdenCreate, OrdenUpdate
+from proyecto_inventario.dependencias import verificar_api_key
+from ..schemas import OrdenCreate, OrdenUpdate
 
 router = APIRouter(prefix="/ordenes", tags=["ordenes de servicio"])
 
@@ -21,7 +22,7 @@ def guardar_ordenes(ordenes):
 
 # 1 registrar
 @router.post("", status_code=201)
-async def crear_orden(orden: OrdenCreate):
+async def crear_orden(orden: OrdenCreate, api_key: str = Depends(verificar_api_key)):
     ordenes = leer_ordenes()
 
     for dato in ordenes:
@@ -42,7 +43,7 @@ async def crear_orden(orden: OrdenCreate):
     ordenes.append(nueva_orden)
     guardar_ordenes(ordenes)
 
-    return nueva_orden
+    return {"mensaje": "orden creada exitosamente", "orden": nueva_orden, "llave usada": api_key}
 
 # 2consultar
 @router.get("")
@@ -76,7 +77,7 @@ async def consultar_ordenes(
         "ordenes": ordenes
     }
 
-# 3. actualizar
+# 3 actualizar
 @router.put("/{placa}")
 async def actualizar_orden(placa: str, datos: OrdenUpdate):
     ordenes = leer_ordenes()

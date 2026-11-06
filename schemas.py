@@ -35,3 +35,8 @@ class OrdenPatch(BaseModel):
     nuevo_estado: Optional[str] = Field(None, descripcion="ej: el diagnostico, reparada entrada")
     costo_reparacion: Optional[float] = Field(None, gt=0, ge=0)
     falla_reportada: Optional[str] = None
+
+class MecanicoCreate(BaseModel):
+    nombre: str = Field(..., min_length=2, max_length=80, description="Nombre del mecanico")
+    especialidad: str = Field(..., min_length=2, max_length=80, description="Especialidad del mecanico")
+    salario: float = Field(..., gt=0, description="El salario debe ser mayor a cero")
