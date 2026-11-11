@@ -1,4 +1,3 @@
-
 [
     {
         "codigo": "P001",
@@ -14,19 +13,39 @@
     },
     {
         "codigo": "P003",
-        "nombre": "Jabon",
+        "nombre": "Jab\u00f3n",
         "stock": 3,
         "categoria": "Aseo"
     },
     {
         "codigo": "P004",
         "nombre": "Buj\u00eda",
-        "categoria": "Ingnicion",
+        "categoria": "Ignici\u00f3n",
         "precio": 50000.0,
         "stock": 15,
         "compatible_con": [
             "motos",
             "carros"
+        ]
+    },
+    {
+        "codigo": "P005",
+        "nombre": "Aceite",
+        "categoria": "Lubricantes",
+        "precio": 25000.0,
+        "stock": 10,
+        "compatible_con": [
+            "motos"
+        ]
+    },
+    {
+        "codigo": "P006",
+        "nombre": "Filtro de aceite",
+        "categoria": "Mantenimiento",
+        "precio": 32000.0,
+        "stock": 8,
+        "compatible_con": [
+            "motos"
         ]
     }
 ]
