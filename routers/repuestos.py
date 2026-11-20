@@ -31,3 +31,4 @@ async def listar_repuestos(db: AsyncSession = Depends(obtener_db)):
     sentencia = select(Repuesto)
     resultado = await db.execute(sentencia)
     return resultado.scalars().all()
+

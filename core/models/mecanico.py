@@ -1,5 +1,6 @@
 from sqlalchemy import Boolean, Column, Integer, String
 from core.database import Base
+from sqlalchemy.orm import relationship
 
 class Mecanico(Base):
     __tablename__ = "mecanicos"
@@ -9,3 +10,5 @@ class Mecanico(Base):
     nombre_completo = Column(String(100), nullable=False)
     especialidad = Column(String(50), nullable=True)
     activo = Column(Boolean, default=True, nullable=False)
+
+    ordenes = relationship("Orden", back_populates="mecanico")

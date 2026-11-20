@@ -1,5 +1,7 @@
 from sqlalchemy import Column, Float, Integer, String
+from sqlalchemy.orm import relationship
 from core.database import Base
+
 
 class Repuesto(Base):
     __tablename__ = "repuestos"
@@ -10,3 +12,5 @@ class Repuesto(Base):
     precio_compra = Column(Float, nullable=False)
     precio_venta = Column(Float, nullable=False)
     stock_actual = Column(Integer, default=0, nullable=False)
+
+    ordenes_asociadas = relationship("OrdenRepuesto", back_populates="repuesto")
